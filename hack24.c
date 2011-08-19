@@ -45,7 +45,7 @@ int main(int argc, char *argv[]) {
                                                 if (d == a || d == b || d == c)
                                                         continue;
                                                 if (goto_op(o3, goto_op(o2, goto_op(o1, n[a], n[b]), n[c]), n[d]) == 24)
-                                                        printf("(((%d %c %d) %c %d) %c %d)\n", (int)n[a], sym[o1], (int)n[b], sym[o2], (int)n[c], sym[o3], (int)n[d]);
+                                                        printf("((%.0f %c %.0f) %c %.0f) %c %.0f\n", n[a], sym[o1], n[b], sym[o2], n[c], sym[o3], n[d]);
                                         }
                                 }
                         }
