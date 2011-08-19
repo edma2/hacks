@@ -56,7 +56,7 @@ int main(int argc, char *argv[]) {
                                                 if (d == a || d == b || d == c)
                                                         continue;
                                                 if (goto_op(op3, goto_op(op2, goto_op(op1, n[a], n[b]), n[c]), n[d]) == 24.0)
-                                                        printf("(((%d %c %d) %c %d) %c %d) = 24\n", (int)n[a], sym[op1], (int)n[b], sym[op2], (int)n[c], sym[op3], (int)n[d]);
+                                                        printf("(((%d %c %d) %c %d) %c %d)\n", (int)n[a], sym[op1], (int)n[b], sym[op2], (int)n[c], sym[op3], (int)n[d]);
                                         }
                                 }
                         }
