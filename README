@@ -1,1 +1,4 @@
 Random stuff
+================
+permu.py: generates dictionary words based on random permutations of an input string
+hack24.c: finds all solutions to the 24 math game given 4 numbers, available in Ruby and C flavors

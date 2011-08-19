@@ -1,4 +1,4 @@
-#!/bin/ruby
+#!/usr/bin/ruby
 # vim: set shiftwidth=2 softtabstop=2 :
 #
 # Generate valid permutations of a word
