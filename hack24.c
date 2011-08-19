@@ -3,7 +3,7 @@
 
 enum {OP_ADD = 0, OP_SUB, OP_MUL, OP_DIV, OP_MAX};
 
-float goto_op(int op, float x, float y) {
+float op(int op, float x, float y) {
         static void *table[OP_MAX] = {
 		[OP_ADD] &&l_add,
 		[OP_MUL] &&l_mul,
@@ -19,7 +19,7 @@ l_div: return x/y;
 
 int main(int argc, char *argv[]) {
         float n[4];
-        char sym[4] = {'+', '-', '*', '/'};
+        char s[4] = {'+', '-', '*', '/'};
         int o1, o2, o3;
         int a, b, c, d;
         int i;
@@ -44,8 +44,8 @@ int main(int argc, char *argv[]) {
                                         for (d = 0; d < 4; d++) {
                                                 if (d == a || d == b || d == c)
                                                         continue;
-                                                if (goto_op(o3, goto_op(o2, goto_op(o1, n[a], n[b]), n[c]), n[d]) == 24)
-                                                        printf("((%.0f %c %.0f) %c %.0f) %c %.0f\n", n[a], sym[o1], n[b], sym[o2], n[c], sym[o3], n[d]);
+                                                if (op(o3, op(o2, op(o1, n[a], n[b]), n[c]), n[d]) == 24)
+                                                        printf("((%.0f %c %.0f) %c %.0f) %c %.0f\n", n[a], s[o1], n[b], s[o2], n[c], s[o3], n[d]);
                                         }
                                 }
                         }
