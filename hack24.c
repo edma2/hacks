@@ -46,6 +46,8 @@ int main(int argc, char *argv[]) {
                                                         continue;
                                                 if (op(o3, op(o2, op(o1, n[a], n[b]), n[c]), n[d]) == 24)
                                                         printf("((%.0f %c %.0f) %c %.0f) %c %.0f\n", n[a], s[o1], n[b], s[o2], n[c], s[o3], n[d]);
+                                                if (op(o1, op(o2, n[a], n[b]), op(o3, n[c], n[d])) == 24)
+                                                        printf("(%.0f %c %.0f) %c (%.0f %c %.0f)\n", n[a], s[o2], n[b], s[o1], n[c], s[o3], n[d]);
                                         }
                                 }
                         }
